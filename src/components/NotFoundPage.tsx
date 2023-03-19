@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class NotFoundPage extends React.Component {
-  constructor(props) {
+  constructor(props: any) {
     super(props);
   }
   render() {
@@ -10,9 +11,11 @@ class NotFoundPage extends React.Component {
         <h1>Error 404</h1>
         <p>Page n0ot found</p>
         <p>
-          Go 😴 <a href="/">home</a>
+          Go 😴 <Link to="/">home</Link>
         </p>
       </div>
     );
   }
 }
+
+export default NotFoundPage;
