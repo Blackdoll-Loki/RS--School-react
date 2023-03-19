@@ -1,0 +1,8 @@
+.Search-block {
+  margin: 20px auto;
+}
+.Search-block > input {
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+}
