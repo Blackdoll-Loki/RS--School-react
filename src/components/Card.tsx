@@ -9,12 +9,12 @@ class Card extends React.Component<propsData> {
   render() {
     console.log;
     return (
-      <div className="Card" key={this.props.key}>
-        <img src={this.props.data.image} />
+      <div className="Card">
+        <img src={this.props.data.image} className="cardImage" />
         <h2>{this.props.data.name}</h2>
-        <p>{this.props.data.species}</p>
-        <p>{this.props.data.gender}</p>
-        <p>{this.props.data.status}</p>
+        <p className="species">{this.props.data.species}</p>
+        <p className="gender">{this.props.data.gender}</p>
+        <p className="status">{this.props.data.status}</p>
       </div>
     );
   }
