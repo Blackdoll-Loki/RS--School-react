@@ -1,5 +1,5 @@
 import React from 'react';
-import { propsData } from '../interfaces';
+import { cardData, propsData } from '../interfaces';
 import '../styles/Card.css';
 
 class Card extends React.Component<propsData> {
@@ -9,8 +9,8 @@ class Card extends React.Component<propsData> {
   render() {
     console.log;
     return (
-      <div className="Card">
-        <img src={this.props.data.image} className="cardImage" />
+      <div className="Card" role="card">
+        <img src={this.props.data.image} className="cardImage" alt="photo" />
         <h2>{this.props.data.name}</h2>
         <p className="species">{this.props.data.species}</p>
         <p className="gender">{this.props.data.gender}</p>

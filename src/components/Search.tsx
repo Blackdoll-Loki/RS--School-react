@@ -1,5 +1,4 @@
 import React from 'react';
-//import { useState } from 'react';
 import '../styles/Search.css';
 
 class Search extends React.Component<Record<string, unknown>, { input: string }> {

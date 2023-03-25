@@ -6,7 +6,7 @@ class NotFoundPage extends React.Component {
     return (
       <div>
         <h1>Error 404</h1>
-        <p>Page n0ot found</p>
+        <p>Page not found</p>
         <p>
           Go 😴 <Link to="/">home</Link>
         </p>
