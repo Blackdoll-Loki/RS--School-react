@@ -1,0 +1,73 @@
+const data = [
+  {
+    name: 'Blim Blam',
+    status: 'Alive',
+    species: 'Alien',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/50.jpeg',
+  },
+  {
+    name: 'Blue Diplomat',
+    status: 'Alive',
+    species: 'Alien',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/51.jpeg',
+  },
+  {
+    name: 'Blue Footprint Guy',
+    status: 'Dead',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/52.jpeg',
+  },
+  {
+    name: 'Blue Shirt Morty',
+    status: 'unknown',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/53.jpeg',
+  },
+  {
+    name: 'Bobby Moynihan',
+    status: 'Alive',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/54.jpeg',
+  },
+  {
+    name: 'Boobloosian',
+    status: 'Dead',
+    species: 'Alien',
+    gender: 'unknown',
+    image: 'https://rickandmortyapi.com/api/character/avatar/55.jpeg',
+  },
+  {
+    name: 'Bootleg Portal Chemist Rick',
+    status: 'Dead',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/56.jpeg',
+  },
+  {
+    name: 'Borpocian',
+    status: 'Alive',
+    species: 'Alien',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/57.jpeg',
+  },
+  {
+    name: 'Brad',
+    status: 'Alive',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/58.jpeg',
+  },
+  {
+    name: 'Brad Anderson',
+    status: 'Dead',
+    species: 'Human',
+    gender: 'Male',
+    image: 'https://rickandmortyapi.com/api/character/avatar/59.jpeg',
+  },
+];
+export default data;
