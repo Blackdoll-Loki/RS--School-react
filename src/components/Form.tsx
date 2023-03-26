@@ -24,22 +24,14 @@ class Form extends React.Component {
         </select>
         <fieldset>
           <legend>Do you have a job?</legend>
-          <label htmlFor="job">
-            Yes, I have a job
-            <input type="checkbox" name="work" id="job" />
-          </label>
-          <label htmlFor="student">
-            I'm a student
-            <input type="checkbox" name="work" id="student" />
-          </label>
-          <label htmlFor="unemployed">
-            I'm unemployed
-            <input type="checkbox" name="work" id="unemployed" />
-          </label>
-          <label htmlFor="minor">
-            I'm too young
-            <input type="checkbox" name="work" id="minor" />
-          </label>
+          <input type="checkbox" name="work" id="job" />
+          <label htmlFor="job">Yes, I have a job</label>
+          <input type="checkbox" name="work" id="student" />
+          <label htmlFor="student">I&apos;m a student</label>
+          <input type="checkbox" name="work" id="unemployed" />
+          <label htmlFor="unemployed">I&apos;m unemployed</label>
+          <input type="checkbox" name="work" id="minor" />
+          <label htmlFor="minor">I&apos;m too young</label>
         </fieldset>
         <fieldset>
           <legend>What gender are you</legend>
@@ -56,6 +48,7 @@ class Form extends React.Component {
           Unload your avatar
           <input type="file" name="avatar" id="ava" />
         </label>
+        <button type="submit">Submit form</button>
       </form>
     );
   }
