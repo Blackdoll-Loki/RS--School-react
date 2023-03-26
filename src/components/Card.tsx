@@ -1,5 +1,5 @@
 import React from 'react';
-import { cardData, propsData } from '../interfaces';
+import { propsData } from '../interfaces';
 import '../styles/Card.css';
 
 class Card extends React.Component<propsData> {
