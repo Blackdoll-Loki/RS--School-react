@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from './Search';
 import data from 'data';
-import { cardData } from 'interfaces';
+import { cardData } from '../interfaces/interfaces';
 import Card from './Card';
 import '../styles/Homepage.css';
 

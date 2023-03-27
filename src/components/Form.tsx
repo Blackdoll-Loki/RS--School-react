@@ -1,16 +1,33 @@
 import React from 'react';
+import FormState from '../interfaces/FormInterface';
 
-class Form extends React.Component {
+class Form extends React.Component<unknown, FormState> {
+  constructor(props: unknown) {
+    super(props);
+    this.state = {
+      name: React.createRef<HTMLInputElement>(),
+      birthday: React.createRef<HTMLInputElement>(),
+      country: React.createRef<HTMLOptionElement>(),
+      work: React.createRef<HTMLInputElement>(),
+      gender: React.createRef<HTMLInputElement>(),
+      photo: React.createRef<HTMLInputElement>(),
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+  }
   render() {
     return (
-      <form className="form">
+      <form className="form" onSubmit={this.handleSubmit}>
         <label htmlFor="name">
           What is your name?
-          <input type="text" value="" id="name" />
+          <input type="text" ref={this.state.name} id="name" />
         </label>
         <label>
           When is your birthday?
-          <input type="date" />
+          <input type="date" ref={this.state.birthday} />
         </label>
         <select name="country" id="country">
           <option selected>Where do you live after 24.02.2022?</option>
@@ -37,18 +54,18 @@ class Form extends React.Component {
           <legend>What gender are you</legend>
           <label htmlFor="male">
             Male
-            <input type="radio" name="gender" id="male" />
+            <input type="radio" name="gender" id="male" value="male" />
           </label>
           <label htmlFor="female">
             Female
-            <input type="radio" name="gender" id="female" />
+            <input type="radio" name="gender" id="female" value="female" />
           </label>
         </fieldset>
         <label htmlFor="ava">
           Unload your avatar
-          <input type="file" name="avatar" id="ava" />
+          <input type="file" name="avatar" id="ava" ref={this.state.photo} />
         </label>
-        <button type="submit">Submit form</button>
+        <button>Submit form</button>
       </form>
     );
   }
