@@ -1,5 +1,6 @@
 import React from 'react';
 import { FormProps, collectedInfo } from '../interfaces/FormInterface';
+import '../styles/Form.css';
 
 class Form extends React.Component<FormProps> {
   photo: React.RefObject<HTMLInputElement>;
@@ -54,16 +55,16 @@ class Form extends React.Component<FormProps> {
   }
   render() {
     return (
-      <form className="form" onSubmit={this.handleSubmit}>
+      <form className="Form" onSubmit={this.handleSubmit}>
         <label htmlFor="name">
           What is your name?
-          <input type="text" ref={this.name} id="name" />
+          <input type="text" ref={this.name} id="name" className="nameInput" />
         </label>
         <label>
           When is your birthday?
-          <input type="date" ref={this.birthday} />
+          <input type="date" ref={this.birthday} className="dateInput" />
         </label>
-        <select name="country" ref={this.country}>
+        <select name="country" ref={this.country} className="select">
           <option>Where do you live after 24.02.2022?</option>
           <option value={'Ukraine'}>Ukraine</option>
           <option value={'Germany'}>Germany</option>
@@ -76,7 +77,9 @@ class Form extends React.Component<FormProps> {
         <fieldset ref={this.haveJob}>
           <legend>Do you have a job?</legend>
           <input type="checkbox" name="work" value={'job'} />
-          <label htmlFor="job">Yes, I have a job</label>
+          <label htmlFor="job" className="checkboxLabel">
+            Yes, I have a job
+          </label>
           <input type="checkbox" name="work" value={'student'} />
           <label htmlFor="student">I&apos;m a student</label>
           <input type="checkbox" name="work" value={'unemployed'} />
@@ -86,20 +89,20 @@ class Form extends React.Component<FormProps> {
         </fieldset>
         <fieldset ref={this.gender}>
           <legend>What gender are you</legend>
-          <label htmlFor="male">
+          <label htmlFor="male" className="radioLabel">
             Male
             <input type="radio" name="gender" id="male" value="male" />
           </label>
-          <label htmlFor="female">
+          <label htmlFor="female" className="radioLabel">
             Female
             <input type="radio" name="gender" id="female" value="female" />
           </label>
         </fieldset>
         <label htmlFor="ava">
           Unload your avatar
-          <input type="file" name="avatar" id="ava" ref={this.photo} />
+          <input type="file" name="avatar" id="ava" ref={this.photo} className="fileInput" />
         </label>
-        <button>Submit form</button>
+        <button className="submitBtn">Submit form</button>
       </form>
     );
   }
