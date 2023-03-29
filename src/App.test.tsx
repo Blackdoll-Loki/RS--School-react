@@ -4,7 +4,7 @@ import Search from './components/Search';
 import Card from './components/Card';
 import About from 'components/About';
 import data from 'data';
-import { cardData } from 'interfaces';
+import { cardData } from './interfaces/interfaces';
 
 describe('Search', () => {
   it('renders Search component', () => {
