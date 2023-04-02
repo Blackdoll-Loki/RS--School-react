@@ -1,34 +1,20 @@
 import React from 'react';
+import { useState } from 'react';
 import '../styles/Search.css';
 
-class Search extends React.Component<Record<string, unknown>, { input: string }> {
-  constructor(props: Record<string, unknown>) {
-    super(props);
-    this.state = {
-      input: window.localStorage.getItem('input') || '',
-    };
-    this.handleInput = this.handleInput.bind(this);
-  }
-  handleInput(event: React.ChangeEvent<HTMLInputElement>) {
+function Search() {
+  const [input, setInput] = useState('');
+
+  function handleInput(event: React.ChangeEvent<HTMLInputElement>) {
     window.localStorage.setItem('input', event.target.value);
-    this.setState(() => {
-      return {
-        input: event.target.value,
-      };
-    });
+    setInput(event.target.value);
   }
-  render() {
-    return (
-      <div className="Search-block">
-        <input
-          type="text"
-          placeholder="Search"
-          onChange={this.handleInput}
-          value={this.state.input}
-        />
-      </div>
-    );
-  }
+
+  return (
+    <div className="Search-block">
+      <input type="text" placeholder="Search" onChange={handleInput} value={input} />
+    </div>
+  );
 }
 
 export default Search;
