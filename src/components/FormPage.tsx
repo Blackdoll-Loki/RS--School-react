@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Form from './Form';
 import FormCard from '../components/FormCard';
-import { FormPageState, collectedInfo } from 'interfaces/FormInterface';
+import { collectedInfo } from 'interfaces/FormInterface';
 import '../styles/Homepage.css';
 
 function FormPage() {
-  const [formInfoArr, setFormInfoArr] = useState([]);
+  const [formInfoArr, setFormInfoArr] = useState<collectedInfo[]>([]);
 
   function handleProps(info: collectedInfo) {
-    setFormInfoArr((formInfoArr) => formInfoArr.concat(info));
+    setFormInfoArr((formInfoArr) => [...formInfoArr, info]);
   }
   return (
     <div>
