@@ -1,0 +1,51 @@
+.Form {
+  margin: 40px auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  font-size: 18px;
+  color: #1f1f78;
+  border: 2px solid #69b46d;
+  border-radius: 5px;
+  padding: 30px 20px;
+  box-shadow: 0 0 3px 3px #e7e7ff;
+}
+fieldset {
+  border: none;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+legend {
+  margin-bottom: 15px;
+}
+.nameInput,
+.dateInput,
+.fileInput::-webkit-file-upload-button,
+.submitBtn,
+.select {
+  padding: 10px 5px;
+  font-size: 16px;
+  margin-left: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px #e7e7ff;
+  border: 2px solid #a9a9f2;
+}
+.fileInput::-webkit-file-upload-button {
+  background: transparent;
+}
+.fileInput::-webkit-file-upload-button::before {
+  font-size: 14px;
+}
+
+.radioLabel {
+  color: #a80d0d;
+}
+.submitBtn,
+.select {
+  width: 30%;
+  background: transparent;
+}

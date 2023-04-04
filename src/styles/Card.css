@@ -1,0 +1,32 @@
+.Card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 20%;
+  border: 2px solid #a9a9f2;
+  border-radius: 4px;
+  box-shadow: 0 0 3px 3px #e7e7ff;
+}
+.cardImage {
+  width: 100%;
+  height: auto;
+}
+.species {
+  font-weight: 400;
+  color: #69b46d;
+  font-size: 20px;
+}
+.gender {
+  color: #a80d0d;
+  font-weight: 300;
+}
+.status {
+  font-weight: 300;
+  color: #1f1f78;
+  font-size: 18px;
+}
+.Card > h2 {
+  color: #1f1f78;
+  font-weight: 400;
+}
