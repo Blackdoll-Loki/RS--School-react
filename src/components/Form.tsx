@@ -42,18 +42,20 @@ function Form(props: FormProps) {
 
     console.log(obj);
     props.onSubmit(obj as collectedInfo);
+    const form = event.target as HTMLFormElement;
+    form.reset();
   }
   return (
     <form className="Form" onSubmit={handleSubmit}>
       <label htmlFor="name">
         What is your name?
-        <input type="text" ref={name} id="name" className="nameInput" />
+        <input type="text" ref={name} id="name" className="nameInput" required />
       </label>
       <label>
         When is your birthday?
-        <input type="date" ref={birthday} className="dateInput" />
+        <input type="date" ref={birthday} className="dateInput" required />
       </label>
-      <select name="country" ref={country} className="select">
+      <select name="country" ref={country} className="select" required>
         <option>Where do you live after 24.02.2022?</option>
         <option value={'Ukraine'}>Ukraine</option>
         <option value={'Germany'}>Germany</option>
@@ -89,7 +91,7 @@ function Form(props: FormProps) {
       </fieldset>
       <label htmlFor="ava">
         Unload your avatar
-        <input type="file" name="avatar" id="ava" ref={photo} className="fileInput" />
+        <input type="file" name="avatar" id="ava" ref={photo} className="fileInput" required />
       </label>
       <button className="submitBtn">Submit form</button>
     </form>
